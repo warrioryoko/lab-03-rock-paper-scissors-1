@@ -21,9 +21,10 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: orange;
-    border: solid 10px black;
+    background-color: black;
+    border: solid 20px orange;
     border-radius: 10px;
+    border-style: double;
     display: flex;
     justify-content: center;
 }
@@ -34,8 +35,11 @@ main {
     justify-content: center;
     align-items: center;
     margin: 20px;
-    border: solid black 10px;
+    border: solid black 20px;
     border-radius: 15px;
+    border-style: double;
+    background-color: orange;
+    padding: 10px;
 }
 
 input  {
@@ -47,6 +51,7 @@ img {
     height: 300px;
     width: 250px;
     margin: 40px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button {
@@ -62,6 +67,7 @@ button {
 .name {
     font-size: xxx-large;
     font-family: 'Bangers', cursive;
+    margin-top: 20px;
 }
 
 .rules {
@@ -84,4 +90,5 @@ input + img {
     align-items: center;
     font-size: larger;
     font-weight: bolder;
+    margin-bottom: 20px;
 }

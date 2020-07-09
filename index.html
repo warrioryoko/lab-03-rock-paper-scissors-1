@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
@@ -17,33 +18,33 @@
        
     </header>
     <main>
-        <name> Rockin' Paper Scissors! </name>
+        <div class="name"> Rockin' Paper Scissors! </div>
         <div class="rules">You Know the Rules</div>
         <section>
             <label>
-                Rock
+                
                 <input type="radio" name="gesture" value="rock" checked/>
-                <img src="https://www.fillmurray.com/200/200"/>
+                <img src="./images/hand-in-rock-sign-vector-13935937.jpg"/>
 
             </label>
 
             <label>
-                Paper 
+                 
                 <input type="radio" name="gesture" value="paper"/>
-                <img src="https://www.fillmurray.com/200/200"/>
+                <img src="./images/hand-3.jpg"/>
 
             </label>
 
             <label>
-                Scissors
+                
                 <input type="radio" name="gesture" value="scissors"/>
-                <img src="https://www.fillmurray.com/200/200"/>
+                <img src="./images/7e7f7a915da37bbdbf67e199ab6e6e6a.jpg"/>
 
             </label>
-            <button id="play-button">Go ahead 'n try!</button>
-
+            
         </section>
-        <section>
+        <button id="play-button">Go ahead 'n try!</button>
+        <section class="feedback">
             <span id="result"></span>
             <div id="win-tally"></div>
             <div id="loss-tally"></div>

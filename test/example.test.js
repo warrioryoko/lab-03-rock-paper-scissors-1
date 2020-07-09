@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { checkResult } from '../rpsUtils.js';
+import { getRandomThrow } from '../rpsUtils';
 const test = QUnit.test;
 
 test('returns loss when player rock and computer paper', (expect) => {
@@ -163,4 +164,16 @@ test('returns win when player draws scissors and computer draws paper', (expect)
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
+});
+
+test('it should return rock paper or scissors', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = true;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = getRandomThrow();
+    //Assert
+    // Make assertions about what is expected versus the actual result
+    assert.equal(expected, actual === 'rock' || actual === 'paper' || actual === 'scissors');
 });

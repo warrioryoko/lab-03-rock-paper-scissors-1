@@ -6,7 +6,7 @@ const results = document.querySelector('#result');
 const wins = document.querySelector('#tally');
 const losses = document.querySelector('#loss-tally');
 const draws = document.querySelector('#draws-tally');
-console.log(getRandomThrow());
+
 
 
 
@@ -23,12 +23,15 @@ let drawsData = 0;
 
 // set event listeners to update state and DOM
 playButton.addEventListener('click', () => {
-    const player = document.querySelector('input:checked');
+    const playerInfo = document.querySelector('input:checked');
+    const player = playerInfo.value;
     const computer = getRandomThrow();
-    console.log(player, computer);
+    console.log(computer);
+    console.log(player);
     const result = checkResult(player, computer);
+    console.log(result);
     if (result === 'win');
-    winsData ++;
-    results.style.textcontent = winsData;
-
+    return winsData ++;
+    results.style.textcontent = 'You have ' + winsData + ' wins!';
+    
 });

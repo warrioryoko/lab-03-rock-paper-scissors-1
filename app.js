@@ -3,9 +3,9 @@ import { getRandomThrow } from './rpsUtils.js';
 import { checkResult } from './rpsUtils.js';
 const playButton = document.querySelector('#play-button');
 const results = document.querySelector('#result');
-const wins = document.querySelector('#tally');
+const wins = document.querySelector('#win-tally');
 const losses = document.querySelector('#loss-tally');
-const draws = document.querySelector('#draws-tally');
+const draws = document.querySelector('#draw-tally');
 
 
 
@@ -15,7 +15,7 @@ const draws = document.querySelector('#draws-tally');
 
 // initialize state
 let winsData = 0;
-let lossdata = 0;
+let lossData = 0;
 let drawsData = 0;
 
 
@@ -26,12 +26,24 @@ playButton.addEventListener('click', () => {
     const playerInfo = document.querySelector('input:checked');
     const player = playerInfo.value;
     const computer = getRandomThrow();
-    console.log(computer);
-    console.log(player);
     const result = checkResult(player, computer);
-    console.log(result);
-    if (result === 'win');
-    return winsData ++;
-    results.style.textcontent = 'You have ' + winsData + ' wins!';
     
-});
+    if (result === 'win') {
+        winsData ++;
+        results.textContent = ('You have WON!');
+        wins.textContent = 'you have ' + winsData + ' wins!';
+        
+    }
+    if (result === 'loss') {
+        lossData ++;
+        results.textContent = 'You LOSE!';
+        losses.textContent = 'You have ' + lossData + ' losses. wah wah';
+
+    }
+    if (result === 'draw') {
+        drawsData ++;
+        results.textContent = 'It looks like a draw, how boring';
+        draws.textContent = 'You have bored me ' + drawsData + ' times.';
+
+    }
+}); 

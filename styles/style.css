@@ -33,27 +33,30 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin: 20px;
+    border: solid black 10px;
+    border-radius: 15px;
 }
 
-input {
+input  {
     display: none;
+    cursor: pointer;
 }
 
 img {
     height: 300px;
     width: 250px;
     margin: 40px;
-
 }
+
 button {
     height: 40px;
     width: 150px;
     font-size: large;
-}
-
-[type=radio] {
-    border: solid black 10px;
+    border: solid black 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
 }
 
 .name {
@@ -65,10 +68,20 @@ button {
     font-size: xx-large;
     font-family: 'Bangers', cursive;
 }
-.checkmark {
+input:checked + img {
     border: solid black 5px;
+    cursor: pointer;
 }
 
+input + img {
+    cursor: pointer;
+}
+
+
 .feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: larger;
+    font-weight: bolder;
 }
